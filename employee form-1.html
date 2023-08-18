@@ -1,0 +1,97 @@
+<html>
+
+    <head>
+
+        <title>Employee Salary Pay </title>
+
+        <table>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text"></td>
+            </tr>             
+            
+            <tr>
+                <td>Basic Pay</td>
+                <td><input type="text" id="basic"></td>
+            </tr>
+ 
+            <tr>
+                <td colspan=2 align="center">
+                    <input type="button" value="Calculate" OnClick="Calculate()">
+                </td>
+            </tr>
+ 
+            <tr>
+                <td>DA</td>
+                <td><input type="text" id="da"></td>
+            </tr>
+    
+            <tr>
+                <td>HRA</td>
+                <td><input type="text" id="hra"></td>
+            </tr>    
+
+            <tr>
+                <td>GST</td>
+                <td><input type="text" id="pf"></td>
+            </tr>     
+ 
+            <tr>
+                <td>Tax</td>
+                <td><input type="text" id="tax"></td>
+            </tr>  
+
+            <tr>
+                <td>GrossPay</td>
+                <td><input type="text" id="grosspay"></td>
+            </tr>
+  
+            <tr>
+                <td>Deduction</td>
+                <td><input type="text" id="deduction"></td>
+            </tr>  
+
+            <tr>
+                <td>NetPay</td>
+                <td><input type="text" id="netpay"></td>
+            </tr> 
+ 
+        </table>
+
+        <script>
+            
+            function Calculate()
+        
+            {
+           
+            bp=parseFloat(document.getElementById("basic").value);
+
+            da=0.05*bp;
+            document.getElementById("da").value=da;
+
+            hra=0.10*bp;
+            document.getElementById("hra").value=hra;
+
+            pf=0.125*bp;
+            document.getElementById("pf").value=pf;
+
+            tax=200;
+            document.getElementById("tax").value=tax;
+
+            grosspay=da+hra+bp+tax;
+            document.getElementById("grosspay").value=grosspay;
+
+            deduction=pf+tax;
+            document.getElementById("deduction").value=deduction;
+
+            netpay=grosspay-deduction;
+
+            document.getElementById("netpay").value=netpay;
+            }
+         
+        </script>
+    </head>
+</html>
+        
+             

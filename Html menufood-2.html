@@ -1,0 +1,75 @@
+<html>
+<head>
+<title> food menu </title>
+</head>
+<script>
+    function bill(){
+       main=document.getElementById("main");
+       star=document.getElementById("star");
+       drinks=document.getElementById("soft");
+       select="item name price\n";
+       total=0;
+       for(i=0;i<main.options.length;i++){
+           ch=main.options[i];
+           if(ch.selected==true){
+            price=parseInt(ch.value);
+            total=total+price
+            select=select+ch.text+" "+price+"\n";
+        }
+   }
+      for(i=0;i<star.options.length;i++){
+           ch=star.options[i];
+           if(ch.selected==true){
+            price=parseInt(ch.value);
+            total=total+price
+            select=select+ch.text+" "+price+"\n";
+        }
+   }
+      for(i=0;i<soft.options.length;i++){
+           ch=soft.options[i];
+           if(ch.selected==true){
+            price=parseInt(ch.value);
+            total=total+price
+            select=select+ch.text+" "+price+"\n";
+        }
+   }
+     select=select+"Total cost"+total+"\n";
+     document.getElementById("display").value=select;
+}
+  </script>
+<form>
+      main course<select id="main"multiple>
+                 <option value="100">biriyani</option> <br/>  
+                 <option value="150">biriyani rice </option>
+                 <option value="50"> kabab </option>
+                 <option value="55"> kushka </option>
+                 </select> <br/> <br/>&nbsp;
+
+      starters<select id="star"multiple>&nbsp;
+                 <option value="60">gobi</option>
+                 <option value="50">fried rice</option>
+                 <option value="65">egg rice</option>
+                 <option value="70">double egg rice</option>
+                 </select> <br/> <br/>&nbsp;
+
+      soft drinks<select id="soft"multiple> <br/>  <br/>
+                 <option value="20">spirt</option> <br/>    
+                 <option value="25">coco cola</option><br/>     
+                 <option value="30">lime juice</option><br/>     
+                 <option value="35">soda</option> <br/> 
+                 </select> <br/> <br/>&nbsp;
+
+ display <textarea id="display" rows=10 cols=20> </textarea> <br/> <br/>
+<input type ="button"value="Total cost"onclick="bill()"> 
+<input type ="button"value="clear"> 
+</form>
+</html>
+
+
+
+
+
+
+
+
+

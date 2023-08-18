@@ -1,0 +1,78 @@
+<html>
+ <head>
+  <style>
+ tr, td {
+  border: 2px solid;
+  color:black;
+  font-size:30px;
+
+}
+table{
+border:2px solid;
+width:50%;
+height:50%;
+}
+</style>
+
+  <script>
+   function check()
+   {
+    var total=0,avg=0; 
+    x=Number(document.getElementById("s1").value);
+    y=Number(document.getElementById("s2").value);
+    z=Number(document.getElementById("s3").value);
+    total=x+y+z;
+    avg=total/3;
+    document.write("total marks = "+total+"<br>");
+    document.write("avarage marks = "+avg+"<br>");      
+    per=(total*100)/300;
+    document.write("percentage ="+per+"<br>");
+    if(per>=95)
+     document.write("outstanding"+"<br>");
+    else if(per>=85)
+     document.write("distinction"+"<br>");
+    else if(per>75)
+     document.write("1st class"+"<br>");
+    else if(per> 65 )
+     document.write("2nd class"+"<br>");
+    else
+     document.write("fail"+"<br>");       
+    
+   }
+  </script>
+ </head>
+<body>
+ <form id="form1">
+  <table border="2px" bgcolor="skyblue">
+   <tr>
+     <td>NAME :</td>
+     <td><input type="text"></td>
+   </tr>
+    <tr>
+     <td>CLASS :</td>
+     <td><input type="text"></td>
+    </tr>      
+     <tr>
+     <td>REG NO :</td>
+     <td><input type="text">
+   </tr>
+     <tr>
+     <td>python :</td>
+     <td> <input type="text" id="s1"></td>
+   </tr>
+   <tr>
+     <td>java :</td>
+     <td> <input type="text" id="s2"></td>
+   </tr>
+    <tr>
+     <td>dbms :</td>
+     <td> <input type="text" id="s3"></td>
+   </tr>
+  <tr>
+  <td><button onclick="check()">click </button></td>
+  <td> all the best !!</td>
+  </tr>
+  </table>
+ </form>
+</body>
+</html>

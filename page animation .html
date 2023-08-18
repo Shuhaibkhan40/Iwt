@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> java script </title>
+<script>
+function disp(id)
+{
+  d=document.getElementById(id);
+  d.style.zIndex=10;
+}
+function hid(id)
+{
+  d=document.getElementById(id);
+  d.style.zIndex=0;
+}
+</script>
+<style>
+       .img1{
+            top:100px;
+            left:100px;
+            position:absolute;
+            z-index=0;
+            height:200px;
+            width:200px;
+            }
+          
+        .img2{
+              top:150px;
+              left:150px;
+              position:absolute;
+              z-index=0;
+              height:200px;
+              width:200px;
+             }
+
+         .img3{
+              top:200px;
+              left:200px;
+              position:absolute;
+              z-index=0;
+              height:200px;
+              width:200px;
+             }
+</style>
+</head>
+<body>
+      <img src ="C:\Users\54LAB-2BCA\Downloads\animation3.jpg" class="img1" id="1" onmouseover= "disp('1')" onmouseout="hid('1')">
+      <img src ="C:\Users\54LAB-2BCA\Downloads\animation2.jpg" class="img2" id="2" onmouseover= "disp('2')" onmouseout="hid('2')">
+      <img src ="C:\Users\54LAB-2BCA\Downloads\animation.jpg" class="img3" id="3" onmouseover= "disp('3')" onmouseout="hid('3')">
+</body>
+</html>
